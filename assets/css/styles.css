@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,0,0);
+  background: linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 50px;
+}
+
+.fightarea {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+#char,
+#monster {
+  flex: 1;
+}
+
+.vs {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #ffffff;
+  margin-left: 40px;
+  margin-right: 40px;
+  animation: AnimationVS 1s infinite linear reverse;
+}
+
+.name {
+  color: #ffffff;
+  font-size: 35px;
+  font-family: sans-serif;
+}
+
+.reset_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 90px;
+  height: 35px;
+  background-color: red;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+.attackButton {
+  margin-top: 20px;
+  border-radius: 5px;
+  width: 80px;
+  height: 35px;
+  background: rgb(28, 36, 80);
+  background: linear-gradient(
+    45deg,
+    rgba(28, 36, 80, 1) 39%,
+    rgba(0, 0, 159, 1) 100%
+  );
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.lifebar {
+  overflow: hidden;
+  height: 15px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.lifebar .bar {
+  height: 15px;
+  background-color: red;
+  border-radius: 3px;
+}
+
+.log {
+  background-color: #000;
+  margin: auto;
+  color: #fff;
+  margin-top: 100px;
+  border: 1px dotted #999;
+  height: 300px;
+  max-width: 1000px;
+  overflow-y: scroll;
+  border: 10px solid #000000;
+  border-radius: 10px;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.log::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
+  background-color: #000000;
+}
+
+.log::-webkit-scrollbar {
+  width: 10px;
+  background-color: #d0d4ce;
+}
+
+.log::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #2e64d7;
+}
+
+@keyframes AnimationVS {
+  0% {
+    text-shadow: 0 0 10px #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 15px #ffffff;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .container {
+    padding: 20px;
+    height: 100%;
+  }
+  .fightarea {
+    flex-direction: column;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .attackButton {
+    width: 90px;
+    height: 70px;
+    font-size: 20px;
+  }
+  .log {
+    background-color: #000;
+    margin-top: 50px;
+    font-size: 21px;
+  }
+}
