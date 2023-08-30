@@ -95,11 +95,13 @@ const stage = {
   },
 
   doAttack(attacking, attacked) {
-    if (attacking.life <= 0 || attacked.life <= 0) {
+     if (attacking.life <= 0 || attacked.life <= 0) {
       if(attacked.life <= 0) {
         alert(`${attacked.name} ${",perdeu a luta e está morto 😢😢😢😢"}`);
+        log.addMessage(`${attacked.name} ${",perdeu a luta e está morto 😢😢😢😢"}`);
       } else if(attacking.life <= 0) {
         alert(`${attacking.name} ${",perdeu a luta e está morto 😢😢😢😢"}`);
+        log.addMessage(`${attacking.name} ${",perdeu a luta e está morto 😢😢😢😢"}`);
       } 
       return;
     }
