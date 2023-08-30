@@ -96,7 +96,7 @@ const stage = {
 
   doAttack(attacking, attacked) {
     if (attacking.life <= 0 || attacked.life <= 0) {
-      log.addMessage("Alguém tá morto, não pode atacar.");
+      alert(`${attacked.name} ${",perdeu a luta e está morto 😢😢😢😢"}`);
       return;
     }
 
